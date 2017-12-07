@@ -21,5 +21,10 @@ namespace AdventOfCode2017
                 .Sum()
                 .ToString();
         }
+
+        public static int CorruptionChecksum(string input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
