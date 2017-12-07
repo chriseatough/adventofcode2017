@@ -7,13 +7,13 @@ namespace UnitTestProject1
     public class AdventOfCode2017Tests
     {
         [Theory(DisplayName = "InverseCaptcha")]
-        [InlineData(new int[] { 1, 1, 2, 2 }, 3)]
-        [InlineData(new int[] { 1, 1, 1, 1 }, 4)]
-        [InlineData(new int[] { 1, 2, 3, 4 }, 0)]
-        [InlineData(new int[] { 9, 1, 2, 1, 2, 1, 2, 9 }, 9)]
-        public void TestInverseCaptcha(int[] input, int expected)
+        [InlineData("1122", "3")]
+        [InlineData("1111", "4")]
+        [InlineData("1234", "0")]
+        [InlineData("91212129", "9")]
+        public void TestInverseCaptcha(string input, string @is)
         {
-            Assert.Equal(expected, AdventOfCode2017.AdventOfCode2017.InverseCaptcha(input));
+            Assert.Equal(@is, AdventOfCode2017.AdventOfCode2017.InverseCaptcha(input));
         }
     }
 }
