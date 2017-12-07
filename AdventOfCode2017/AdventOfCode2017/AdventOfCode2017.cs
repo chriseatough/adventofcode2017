@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2017
 {
-    public class Class1
+    public class AdventOfCode2017
     {
+        public static int InverseCaptcha(int[] input)
+        {
+            return -1;
+        }
     }
 }
