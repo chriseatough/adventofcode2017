@@ -24,7 +24,25 @@ namespace AdventOfCode2017
 
         public static int CorruptionChecksum(string input)
         {
-            throw new NotImplementedException();
+            var sanitize = input.Replace('\t', ' ');
+
+            var separators = new[] { "\r\n" };
+            var rows = sanitize.Split(separators, StringSplitOptions.None);
+
+            return rows
+                .Select(GetRows)
+                .Select(x=> x.Last() - x.First())
+                .Sum();
+
+            IEnumerable<int> GetRows(string row)
+            {
+                var i = row
+                    .Split(' ')
+                    .Select(x => int.Parse(x))
+                    .OrderBy(x=>x);
+
+                return i;
+            }
         }
     }
 }
